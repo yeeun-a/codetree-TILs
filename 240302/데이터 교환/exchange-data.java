@@ -5,6 +5,13 @@ public class Main {
         a = c; // 7
         b = temp; // 5
         c = temp2; // 6
+
+        // 교체
+        // int temp = a;
+        // a = c;
+        // c = b;
+        // b = temp;
+
         System.out.printf("%d\n%d\n%d", a, b, c);
     }
 }
