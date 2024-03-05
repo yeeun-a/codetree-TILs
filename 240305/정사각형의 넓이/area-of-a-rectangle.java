@@ -7,6 +7,6 @@ public class Main {
 
         int width = n * n;
         System.out.println(width);
-        if (n > 5) { System.out.print("tiny"); } 
+        if (n < 5) { System.out.print("tiny"); } 
     }
 }
