@@ -14,8 +14,12 @@ public class Main {
         if (a_sym == 'Y' && a_temp >= 37) {
             if ((b_sym == 'Y' && b_temp >= 37)|| (c_sym == 'Y' && c_temp >= 37))
                 System.out.print('E');
+            else
+                System.out.print('N');
         } else {
             if ((b_sym == 'Y' && b_temp >= 37) && (c_sym == 'Y' && c_temp >= 37))
+                System.out.print('E');
+            else
                 System.out.print('N');
         }
     }
