@@ -3,10 +3,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int aMath = sc.nextInt();
-        int aEng = sc.nextInt();
-        int bMath = sc.nextInt();
-        int bEng = sc.nextInt();
+        
+        int a_math = sc.nextInt();
+        int a_eng = sc.nextInt();
+        int b_math = sc.nextInt();
+        int b_eng = sc.nextInt();
 
         // if (aMath == bMath)
         //     System.out.print(aEng > bEng ? "A" : "B");
