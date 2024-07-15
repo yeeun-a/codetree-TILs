@@ -10,16 +10,18 @@ for _ in range(n):
 ans=-1
 for y in range(n):
     for x in range(m):
-        for h in range(n):
-            if y+h >= n: break
-            flag = 1
-            for w in range(m):
-                if w+x >= m: 
-                    flag = 0
-                    break
-                if graph[y+h][x+w] <= 0: 
-                    flag = 0
-                    break
-            if flag:
-                ans = max(ans, (w+1)*(h+1))
+        for h in range(1, n+1):
+            if y+h-1>=n: break
+            for w in range(1, m+1):
+                if x+w-1>=m: break
+                flag = 1
+                for i in range(h):
+                    for j in range(w):
+                        if graph[y+i][x+j] <= 0:
+                            flag = 0
+                            break
+                    if not flag:
+                        break
+                if flag:
+                    ans = max(ans, w*h)
 print(ans)
