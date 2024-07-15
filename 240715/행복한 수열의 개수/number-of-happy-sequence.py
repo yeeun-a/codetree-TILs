@@ -8,28 +8,28 @@ for _ in range(n):
 
 ans=0
 for i in range(n):
-    last_num=graph[i][0]
-    res=1
-    for j in range(1,n):
+    last_num=-1
+    res=0
+    for j in range(n):
         if last_num==graph[i][j]:
             res+=1
-            if res >= m:
-                ans+=1
-                break
         else:
             res=1
             last_num=graph[i][j]
+        if res >= m:
+            ans+=1
+            break
 
 for i in range(n):
-    last_num=graph[0][i]
-    res=1
-    for j in range(1,n):
-        if last_num==graph[j][i]:
+    last_num=-1
+    res=0
+    for j in range(n):
+        if last_num==graph[i][j]:
             res+=1
-            if res >= m:
-                ans+=1
-                break
         else:
             res=1
-            last_num=graph[j][i]
+            last_num=graph[i][j]
+        if res >= m:
+            ans+=1
+            break
 print(ans)
