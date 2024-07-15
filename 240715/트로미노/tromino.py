@@ -27,5 +27,7 @@ for i in range(n):
                     flag = 0
                     break
                 res += graph[i+y][j+x]
+            if not flag:
+                continue
             ans = max(ans, res)
 print(ans)
