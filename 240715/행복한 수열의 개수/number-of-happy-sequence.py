@@ -24,11 +24,11 @@ for i in range(n):
     last_num=-1
     res=0
     for j in range(n):
-        if last_num==graph[i][j]:
+        if last_num==graph[j][i]:
             res+=1
         else:
             res=1
-            last_num=graph[i][j]
+            last_num=graph[j][i]
         if res >= m:
             ans+=1
             break
