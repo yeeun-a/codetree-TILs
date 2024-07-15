@@ -5,7 +5,7 @@ n,m=map(int,r().split())
 coin=[]
 for y in range(n):
     temp = list(map(int,r().split()))
-    for x in range(m):
+    for x in range(n):
         if temp[x] == 1:
             coin.append((y,x))
 
