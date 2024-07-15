@@ -18,7 +18,7 @@ for _ in range(n):
 
 ans = 0
 for i in range(n):
-    for j in range(n):
+    for j in range(m):
         for cord in shape:
             flag = 1
             res = 0
