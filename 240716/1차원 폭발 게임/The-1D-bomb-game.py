@@ -9,25 +9,30 @@ for _ in range(n):
 end = n
 for _ in range(n):
     last_idx = 0
+    last_num = -1
     cnt = 0
-    flag = 0
     for i in range(end):
-        if a[last_idx] == a[i]:
+        if last_num == a[i]:
             cnt += 1
         else:
-            if cnt >= m:
-                for j in range(i, end):
-                    a[last_idx] = a[j]
-                    last_idx+=1
-                end = last_idx
-                flag = 1
-                cnt = 0
-                break
+            last_num = a[i]
             last_idx = i
             cnt = 1
-    if cnt >= m:
-        end = last_idx
-    if not flag: break
-            
+        if cnt == m:
+            for k in range(last_idx, i+1):
+                a[k] = 0
+        elif cnt > m:
+            a[i] = 0
+    tmp = -1
+    for i in range(end):
+        if a[i] == 0:
+            if tmp == -1: tmp = i
+        elif tmp != -1:
+            a[tmp] = a[i]
+            a[i] = 0
+            tmp += 1
+    if tmp == -1: break
+    end = tmp
+        
 print(end)
 print(*a[:end], sep='\n')
