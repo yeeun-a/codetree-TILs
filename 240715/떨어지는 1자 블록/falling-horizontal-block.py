@@ -11,6 +11,7 @@ y=0
 while 1:
     flag = 1
     y+=1
+    if y >= n: break
     for x in range(m):
         if graph[y][k+x] == 1:
             flag = 0
