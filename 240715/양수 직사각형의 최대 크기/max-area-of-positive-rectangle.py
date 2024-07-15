@@ -14,7 +14,9 @@ for y in range(n):
             if y+h >= n: break
             flag = 1
             for w in range(m):
-                if w+x >= m: break
+                if w+x >= m: 
+                    flag = 0
+                    break
                 if graph[y+h][x+w] <= 0: 
                     flag = 0
                     break
