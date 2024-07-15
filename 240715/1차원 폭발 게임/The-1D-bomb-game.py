@@ -11,7 +11,7 @@ while 1:
     last_num = 0
     last_idx = -1
     cnt = 0
-    flag = 1
+    flag = 0
     pre = end
     for i in range(len(a)):
         e = a[i]
@@ -32,4 +32,4 @@ while 1:
     if pre == end:
         break
 print(end+1)
-print(*a[:end+1])
+print(*a[:end+1], sep='\n')
